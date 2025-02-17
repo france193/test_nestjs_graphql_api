@@ -1,9 +1,20 @@
 {
   "name": "test_nestjs_graphql_api",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
+  "description": "A NestJS with GraphQL API for managing users with CRUD operations with an in-memory database.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/france193/test_nestjs_graphql_api"
+  },
+  "keywords": [
+    "nestjs",
+    "graphql",
+    "api",
+    "typescript",
+    "users",
+    "crud"
+  ],
+  "author": "Francesco Longo",
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
