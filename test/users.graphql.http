@@ -1,0 +1,63 @@
+### Create User
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation CreateUser($input: CreateUserInput!) { createUser(createUserInput: $input) { id name email age } }",
+  "variables": {
+    "input": {
+      "name": "Alice",
+      "email": "alice@example.com",
+      "age": 25
+    }
+  }
+}
+
+
+### Get All Users
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "query { users { id name email age } }"
+}
+
+
+### Get User by ID
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "query GetUser($id: Int!) { user(id: $id) { id name email age } }",
+  "variables": {
+    "id": 1
+  }
+}
+
+
+### Update User
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation UpdateUser($input: UpdateUserInput!) { updateUser(updateUserInput: $input) { id name email age } }",
+  "variables": {
+    "input": {
+      "id": 1,
+      "name": "Alice Updated",
+      "age": 26
+    }
+  }
+}
+
+
+### Delete User
+POST http://localhost:3000/graphql
+Content-Type: application/json
+
+{
+  "query": "mutation RemoveUser($id: Int!) { removeUser(id: $id) }",
+  "variables": {
+    "id": 1
+  }
+}
